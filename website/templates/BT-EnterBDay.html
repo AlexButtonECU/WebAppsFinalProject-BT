@@ -1,0 +1,120 @@
+<!-- This is a website for HW4 of CSCI 4710 -->
+<!-- This is the enter birthday page-->
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<title>Birthday Tracker</title>
+		<style>
+			ul {
+				list-style-type: none;
+				margin-top: 10;
+				padding: 0;
+			 	overflow: hidden;
+			  	background-color: #3F2D4C;
+			}
+
+			li {
+				padding-right: 10;
+			  	float: right;
+			}
+
+			li a {
+				font-family: 'Verdana';
+				font-size: 16px;
+				font-weight: bold;
+			  	display: block;
+			  	color: C4B8B4;
+			  	text-align: center;
+			  	padding: 14px 16px;
+			  	text-decoration: none;
+			}
+
+			a:hover {
+				background-color: 918398;
+				color: C4B8B4;
+				border-style: solid;
+				border-color: C4B8B4;
+				border-width: 5px;
+				margin: -5px;
+			}
+			label {
+				font-family: 'Verdana';
+				font-style: normal;
+				margin-right: auto;
+				margin-left: 10%;
+				margin-top: 30px;
+			}
+			input[type='text'] {
+				font-family: 'Verdana';
+				width: 50%;
+				height: 35px;
+				font-size: 16px;
+				border-radius: 5px;
+				margin-left: 10%;
+				margin-right: 10%;
+				margin-top: 30px;
+			}
+			input[type='date'] {
+				font-family: 'Verdana';
+				width: 50%;
+				height: 35px;
+				font-size: 16px;
+				border-radius: 5px;
+				margin-left: 10%;
+				margin-right: 10%;
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: C4B8B4;">
+
+		<ul>
+			<li><a href="BT-ViewBDay.html">View Birthdays</a></li>
+			<li><a class="active" href="BT-EnterBDay.html">Enter Birthday</a></li>
+		  	<li><a href="BT-Intro.html">Introduction</a></li>
+		  	<li style="float: left;"><a style="pointer-events: none;">Birthday Tracker</a></li>
+		</ul>
+
+		<div class="form-group" style="text-align:left; font-family: 'Verdana'; font-size: 16px; width: 40%; margin-left: auto; margin-right: auto; margin-top: 100px;color: black; background-color: 918398; padding: 15px; border-radius: 15px;">
+			<form class="form-horizontal" action="{{ url_for('views.enterBDay') }}" method="post">
+				<label type="label" class="control-label" for="inputFirstName">First Name:&nbsp;&nbsp;&nbsp;</label>
+				<input type="text" id="inputFirstName" name="inputFirstName" placeholder="First Name">
+				<br>
+				<label type="label" class="control-label" for="inputLastName">Last Name:&nbsp;&nbsp;&nbsp;</label>
+				<input type="text" id="inputLastName" name="inputLastName" placeholder="Last Name">
+				<br>
+				<label type="label" class="control-label" for="relationship">Relationship:</label>
+				<input type="text" id="relationship" name="relationship" placeholder="Relationship">
+				<br>
+				<label type="label" class="control-label" for="dob">Date of Birth:</label>
+        		<input type="date" id="dob" name="dob" placeholder="MM/DD/YYY" type="text"/>
+        		<br>
+				<label type="label" class="control-label" for="relationship">Gift Ideas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<textarea id="giftIdeas" name="giftIdeas" placeholder="Gift Ideas" style=" font-family: 'Verdana'; width: 50%; height: 100px; font-size: 16px; border-radius: 5px;  margin-left: 10%; margin-right: auto; margin-top: 30px;"></textarea>
+        		<br>
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary" style="height: 50px; width: 100px; font-size: 20px; margin-left: auto; margin-right: auto; margin-top: 30px;" onclick="submitBDay()">Submit</button>
+				</div>
+			</form>
+		</div>
+
+
+		
+		<script>
+			function resetForm(){
+				// This function is pretty obvious, just resets to form values to their defaults after being called
+				document.getElementById('form').reset();
+			}
+			function submitBDay(){
+				// Add the stuff to submit the form data to the database here
+				// You can look at addpeople.html for how it was done last time
+			}
+		</script>
+
+	</body>
+</html>
