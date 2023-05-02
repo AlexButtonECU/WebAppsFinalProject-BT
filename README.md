@@ -1,5 +1,5 @@
 # CSCI 4710 Web Apps Final Project  
-### By: Alex Button (buttona19@students.ecu.edu), Shannen Geller (@students.ecu.edu), Sepehr Saljooghi (@students.ecu.edu)  
+### By: Alex Button (buttona19@students.ecu.edu), Shannen Geller (gellers16@students.ecu.edu), Sepehr Saljooghi (@students.ecu.edu)  
 
 This is a website that makes it easy to list and keep track of the birthdays of your friends, families, and more.    
 
